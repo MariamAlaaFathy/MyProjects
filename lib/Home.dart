@@ -72,7 +72,7 @@ class Home extends StatelessWidget {
             height: 40,
           ),
           Container(
-            height: 300,
+            height: double.infinity,
             width: 400,
             child: ListView.builder(
                 scrollDirection: Axis.vertical,
