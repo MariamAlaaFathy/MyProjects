@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: 200,
             width: 400,
             child: ListView.builder(
@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(20),
-                        child: Container(
+                        child: SizedBox(
                           height: 200,
                           width: 170,
                           child: Image.asset(
@@ -71,9 +71,9 @@ class Home extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          Container(
-            height: double.infinity,
-            width: 400,
+          SizedBox(
+            height: 250,
+            width: double.infinity,
             child: ListView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: trend.length,
@@ -82,9 +82,9 @@ class Home extends StatelessWidget {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(20),
-                        child: Container(
+                        child: SizedBox(
                           height: 200,
-                          width: 350,
+                          width: double.infinity,
                           child: Image.asset(
                             trend[index].image,
                             fit: BoxFit.fill,
